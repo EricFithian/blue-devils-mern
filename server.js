@@ -59,10 +59,10 @@ app.get("/", (req, res) => {
 // PEOPLE INDEX ROUTE
 app.get("/people", async (req, res) => {
     try {
-      // send all people
+        // send all people
         res.json(await People.find({}));
     } catch (error) {
-      //send error
+        //send error
         res.status(400).json(error);
     }
 });
@@ -70,10 +70,10 @@ app.get("/people", async (req, res) => {
 // PEOPLE CREATE ROUTE
 app.post("/people", async (req, res) => {
     try {
-      // send all people
+        // send all people
         res.json(await People.create(req.body));
     } catch (error) {
-      //send error
+        //send error
         res.status(400).json(error);
     }
 });
